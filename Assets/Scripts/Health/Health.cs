@@ -2,15 +2,41 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float maxHealth = 10f;
+    public float currentHealth { get; private set; }
+    private Animator anim;
+    private bool isDead = false;
+
+    private void Awake()
     {
-        
+        currentHealth = maxHealth;
+        anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(float _damage)
     {
-        
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, maxHealth);
+
+        if (currentHealth > 0)
+        {
+            anim.SetTrigger("hurt");
+            //iframes
+        }
+        else
+        {
+            if (!isDead)
+            {
+                anim.SetTrigger("die");
+                GetComponent<Movement>().enabled = false;
+                isDead = true;
+            }
+
+        }
     }
+
+    public void AddHealth(float _value)
+    {
+        currentHealth = Mathf.Clamp(currentHealth + _value, 0, maxHealth);
+    }
+
 }
