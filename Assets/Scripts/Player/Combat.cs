@@ -3,7 +3,6 @@ using System.Collections;
 
 public class Combat : MonoBehaviour
 {
-    [SerializeField] private float attackDamage = 10f;
     private Animator anim;
     private bool isAttacking = false;
 

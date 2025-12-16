@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 63738797}
   - component: {fileID: 63738799}
-  - component: {fileID: 63738798}
+  - component: {fileID: 63738800}
   m_Layer: 0
   m_Name: dark_forest_5_0
   m_TagString: Untagged
@@ -152,20 +152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600655558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &63738798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63738796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533420a257d7571418a03e28d9df8627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Background
-  player: {fileID: 1483545125}
-  backgroundSpeed: 0.95
 --- !u!212 &63738799
 SpriteRenderer:
   serializedVersion: 2
@@ -215,7 +201,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4481418151277048254, guid: bb0d2c52e1ed16046bd5a97a13729652, type: 3}
+  m_Sprite: {fileID: -4481418151277048254, guid: 51ae34dfd6804a24aae22fb0c76abb02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -225,6 +211,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &63738800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63738796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9533f38a515b489d2d5a8f38ecf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Background
+  player: {fileID: 1483545125}
+  backgroundSpeed: 0.95
 --- !u!1 &169733838
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,6 +304,37 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1 &254925257
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254925258}
+  m_Layer: 0
+  m_Name: Attackbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254925258
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254925257}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.69, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1483545125}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &358306945
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,9 +739,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271187018f6d2fe48a5d510098571b30, type: 3}
+  m_Script: {fileID: 11500000, guid: c650b8e3592f2a449883b99f7b2a9b5e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Camera
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
   player: {fileID: 1483545125}
 --- !u!1 &520818701
 GameObject:
@@ -860,7 +891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2036936455, guid: 06726a4e25d083240ba08abc1c3e57bb, type: 3}
+  m_Sprite: {fileID: -2053982887, guid: 06726a4e25d083240ba08abc1c3e57bb, type: 3}
   m_Type: 3
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1646,7 +1677,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.69, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 254925258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1483545126
@@ -1683,7 +1715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d646580b9f0ef64d94ec4717dae278e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Combat
-  attackDamage: 5
 --- !u!114 &1483545128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,7 +1727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b10e355499f4c4d89503ca660d596e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  maxHealth: 0
 --- !u!1 &1600655557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,7 +1771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1782966747}
   - component: {fileID: 1782966749}
-  - component: {fileID: 1782966748}
+  - component: {fileID: 1782966750}
   m_Layer: 0
   m_Name: dark_forest_1_0
   m_TagString: Untagged
@@ -1764,20 +1794,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600655558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1782966748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782966746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533420a257d7571418a03e28d9df8627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Background
-  player: {fileID: 1483545125}
-  backgroundSpeed: 0.93
 --- !u!212 &1782966749
 SpriteRenderer:
   serializedVersion: 2
@@ -1827,7 +1843,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -12
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -9095966051533419188, guid: 5332c21521602864cb5af82b55800adf, type: 3}
+  m_Sprite: {fileID: -9095966051533419188, guid: 5253c339a9abf964bab9b5fadc4944b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1837,6 +1853,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1782966750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782966746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9533f38a515b489d2d5a8f38ecf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Background
+  player: {fileID: 1483545125}
+  backgroundSpeed: 0.93
 --- !u!1 &1870880543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +2054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2143885170}
   - component: {fileID: 2143885172}
-  - component: {fileID: 2143885171}
+  - component: {fileID: 2143885173}
   m_Layer: 0
   m_Name: dark_forest_4_0
   m_TagString: Untagged
@@ -2047,20 +2077,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1600655558}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2143885171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143885169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 533420a257d7571418a03e28d9df8627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Background
-  player: {fileID: 1483545125}
-  backgroundSpeed: 0.94
 --- !u!212 &2143885172
 SpriteRenderer:
   serializedVersion: 2
@@ -2110,7 +2126,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -11
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3466164058840932138, guid: b24edc4d470280749b4093d4d7d40c03, type: 3}
+  m_Sprite: {fileID: 3466164058840932138, guid: 292cfddb5d8a5e04182546593e0f9c18, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2120,6 +2136,20 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &2143885173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143885169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b9533f38a515b489d2d5a8f38ecf12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Background
+  player: {fileID: 1483545125}
+  backgroundSpeed: 0.94
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
